@@ -2,7 +2,9 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaInstagram, FaWhatsapp, FaArrowUp } from "react-icons/fa";
-
+import { TbMessageChatbot } from "react-icons/tb";
+import Chatbot from "./Chatbot";
+import Link from "next/link";
 
 const carouselImages = [
   "/cow1.jpg",
@@ -14,6 +16,8 @@ const carouselImages = [
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showButton, setShowButton] = useState(false);
+  const [showChat, setShowChat] = useState(false); // Manage chatbot visibility
+
 
   // Scroll to top function
   const scrollToTop = () => {
@@ -79,17 +83,13 @@ const Hero = () => {
         {/* Right Section: Description */}
         <div className="w-full md:w-1/2 flex flex-col items-start justify-center space-y-6">
           <h1 className="text-3xl md:text-5xl font-bold text-[#FF671F]">
-            Welcome to Jaipur Gav Raksha Dal Foundation
+          Welcome to Jaipur Gau Raksha Dal Foundation
           </h1>
           <p className="text-lg md:text-xl text-white font-semibold leading-relaxed">
-            At Gau Seva Dal Foundation, we are dedicated to protecting and nurturing
-            cows, ensuring their welfare, and supporting sustainable agriculture. 
-            Our organization works to create awareness about the importance of cows 
-            in our culture and ecology. Join us in this mission to make a difference.
+          At Jaipur Gau Raksha Dal Foundation, we are committed to rescuing, treating, and caring for injured and accident-struck cows. Our 24/7 animal hospital provides critical care, on-site treatment, and compassionate support to ensure the well-being of these gentle beings.
           </p>
           <p className="text-lg md:text-xl text-white font-semibold leading-relaxed">
-            Support our initiatives and help us build a compassionate and caring
-            community for our beloved cows.
+          Beyond rescue operations, we strive to raise awareness about cow welfare and inspire positive change within our community. With your support, we can continue to protect and heal countless lives.
           </p>
           <button className="px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition">
             Learn More
@@ -127,6 +127,19 @@ const Hero = () => {
         >
           <FaWhatsapp size={20} />
         </a>
+      {/**chatbot icon */}  
+      <div className="py-6">
+      <button
+        onClick={() => setShowChat(!showChat)}
+        className="bg-orange-500 text-white rounded-full p-3 hover:bg-orange-600 transition-all fixed bottom-8 right-8 z-50"
+      >
+        <TbMessageChatbot size={20} />
+      </button>
+
+      {/* Render Chatbot */}
+      <Chatbot showChat={showChat} setShowChat={setShowChat} />
+      </div>
+
       </div>
 
     </div>

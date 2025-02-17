@@ -42,7 +42,7 @@ const hindislogan = "न कामये राज्यम् न स्वर�
             opacity: 1,
           }}
         >
-            <h1 className="text-white lg:text-5xl text-2xl sm:pl-8">
+            <h1 className="text-white lg:text-5xl text-3xl sm:px-0 px-8">
                 {hindislogan}
             </h1>
         </div>
@@ -122,7 +122,7 @@ const hindislogan = "न कामये राज्यम् न स्वर�
 
   {/* Text Section */}
   <div className="relative z-10 max-w-lg text-center sm:text-left sm:w-[450px] md:w-1/2 sm:px-4">
-    <h2 className="text-2xl sm:text-3xl font-semibold text-orange-500 underline">We&apos;re Here To Help</h2>
+    <h2 className="text-2xl sm:text-3xl font-semibold md:text-orange-500 text-white underline">We&apos;re Here To Help</h2>
     <p className="mt-4 text-sm sm:text-base pt-10">
       Committed to providing compassionate care and emergency medical support to cows in need. 
       Founded with the mission to protect and preserve our sacred animals, we specialize in treating injured, 
@@ -140,6 +140,100 @@ const hindislogan = "न कामये राज्यम् न स्वर�
       objectFit="cover"
     />
   </div>
+</div>
+{/**fourth part  */}
+<div className="bg-white py-20 px-6 md:px-16">
+      {/* Section 1: What We Do */}
+      <div className="flex flex-col md:flex-row items-center gap-12 mb-16">
+        {/* Left Side - Text */}
+        <motion.div 
+          className="md:w-1/2 space-y-6"
+          initial={{ opacity: 0, x: -50 }} 
+          whileInView={{ opacity: 1, x: 0 }} 
+          transition={{ duration: 1 }}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800">What We Do</h2>
+          <ul className="space-y-4 text-lg text-gray-700">
+            <li>✅ <strong>Rescue & Shelter</strong> – Providing a safe home for abandoned, injured, and stray cows.</li>
+            <li>✅ <strong>Medical Care</strong> – Regular health check-ups, treatments, and vaccinations.</li>
+            <li>✅ <strong>Nutritious Feeding</strong> – A balanced diet including green fodder, dry fodder, and minerals.</li>
+            <li>✅ <strong>Goshala Management</strong> – Clean shelters, grazing areas, and proper hygiene.</li>
+            <li>✅ <strong>Panchagavya Products</strong> – Sustainable products made from cow derivatives.</li>
+            <li>✅ <strong>Awareness & Gau Raksha</strong> – Spreading awareness about cow protection.</li>
+          </ul>
+        </motion.div>
+
+        {/* Right Side - Image */}
+        <motion.div 
+          className="md:w-1/3 bg-[#FF671F] rounded-2xl"
+          initial={{ opacity: 0, x: 50 }} 
+          whileInView={{ opacity: 1, x: 0 }} 
+          transition={{ duration: 1 }}
+        >
+          <img 
+            src="/about01.jpeg" 
+            alt="Gau Seva" 
+            className="rounded-2xl shadow-lg w-[300px] h-[500px]"
+          />
+        </motion.div>
+      </div>
+
+      {/* Section 2: How We Care for Our Cows */}
+      <div className="flex flex-col md:flex-row-reverse items-center gap-12">
+        {/* Right Side - Text */}
+        <motion.div 
+          className="md:w-1/2 space-y-6"
+          initial={{ opacity: 0, x: 50 }} 
+          whileInView={{ opacity: 1, x: 0 }} 
+          transition={{ duration: 1 }}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800">How We Care for Our Cows</h2>
+          <ul className="space-y-4 text-lg text-gray-700">
+            <li>🔹 <strong>Number of Cows:</strong> We currently shelter <span className="font-bold">[10-15]</span> cows.</li>
+            <li>🔹 <strong>Daily Routine:</strong> Cows are fed twice a day and provided fresh water.</li>
+            <li>🔹 <strong>Medical Attention:</strong> Regular vet check-ups and homeopathic treatments.</li>
+            <li>🔹 <strong>Natural Healing:</strong> Ayurveda and traditional healing methods.</li>
+            <li>🔹 <strong>Comfort & Shelter:</strong> Spacious cow sheds with soft bedding.</li>
+          </ul>
+        </motion.div>
+
+        {/* Left Side - Image */}
+        <motion.div 
+          className="md:w-1/3 bg-[#FF671F] rounded-2xl "
+          initial={{ opacity: 0, x: -50 }} 
+          whileInView={{ opacity: 1, x: 0 }} 
+          transition={{ duration: 1 }}
+        >
+          <img 
+            src="about02.jpeg" 
+            alt="Cow Care" 
+            className="rounded-2xl shadow-lg w-[300px] h-[500px] left-10"
+          />
+        </motion.div>
+      </div>
+    </div>
+{/**fifth section  */}
+<div className="mx-auto h-full w-full"
+ style={{
+       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),url('/banner01.jpg')`,
+       backgroundRepeat: 'no-repeat',
+        backgroundPosition:"center",
+        backgroundSize:"contain",
+        width:"100%",
+        backgroundAttachment:"fixed",
+        padding: '20px',
+        margin: '0 auto',
+        backgroundColor:"orange",
+        opacity:'20',
+        inset:'0',
+       transition: 'background-image 1s ease-in-out',
+      }}>
+        <div className="py-6 px-6">
+          <h1 className="text-3xl underline-[#FF671F] text-white text-center underline py-2">Our Vission & Mission</h1>
+          <p className="text-xl text-white py-3 px-8">--&gt; We envision a world where every cow is treated with love, respect, and dignity. Through our efforts in gau seva, we aim to create a sustainable ecosystem where cows are nurtured, protected, and celebrated as an integral part of our culture and environment.</p>
+          <p className="text-white text-xl py-3 px-8">--&gt; At [Jaipur GawSewa Dal Foundation], we believe that cows are not just animals; they are sacred beings that sustain life and prosperity. Our vision extends beyond just providing shelter—we aim to create a self-sustaining ecosystem where cows are protected, revered, and nurtured for the well-being of humanity and nature.</p>
+        </div>
+
 </div>
 
     </div>
