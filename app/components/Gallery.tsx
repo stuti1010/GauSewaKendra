@@ -29,7 +29,7 @@ const Gallery = () => {
           }} // Replace with your background image path
         >
           <h2 className="text-3xl font-semibold text-[#FF671F] text-center mb-6"><span className='underline hover:text-white'>Image Gallery</span></h2>
-          <h4 className='text-semibold  text-center text-white py-4'>"Explore our collection of captivating moments through stunning images. Each picture tells a story, capturing the essence of our journey, achievements, and memorable events."</h4>
+          <h4 className='text-semibold  text-center text-white py-4'>&ldquo;Explore our collection of captivating moments through stunning images. Each picture tells a story, capturing the essence of our journey, achievements, and memorable events.&rdquo;</h4>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Replace these with your image URLs */}
             <div className="w-full h-60 bg-gray-200 rounded-lg overflow-hidden">
@@ -83,7 +83,7 @@ const Gallery = () => {
           }}
         >
           <h2 className="text-3xl font-semibold text-[#FF671F] text-center mb-6"><span className='underline hover:text-white'>Video Gallery</span></h2>
-          <h3 className='text-semibold  text-white text-center py-4'>"Immerse yourself in our visual stories with engaging videos. From special events to insightful presentations, watch and experience the highlights of our journey."</h3>
+          <h3 className='text-semibold  text-white text-center py-4'>&ldquo;Immerse yourself in our visual stories with engaging videos. From special events to insightful presentations, watch and experience the highlights of our journey.&rdquo;</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-4">
             {/* Replace with your video thumbnails or embedded videos */}
             <div className="w-full h-full  bg-gray-300 rounded-lg overflow-hidden ">

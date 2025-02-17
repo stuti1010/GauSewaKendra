@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { FaInstagram, FaWhatsapp, FaArrowUp } from "react-icons/fa";
 import { TbMessageChatbot } from "react-icons/tb";
 import Chatbot from "./Chatbot";
-import Link from "next/link";
+
 
 const carouselImages = [
   "/cow1.jpg",

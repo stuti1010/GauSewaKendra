@@ -1,14 +1,21 @@
-import { useState } from "react";
-import { MessageSquare, Send } from "lucide-react";
+import { Dispatch, SetStateAction,useState } from "react";
+import {  Send } from "lucide-react";
 import { motion } from "framer-motion";
 
-const Chatbot = ({ showChat, setShowChat }) => {
+
+interface ChatbotProps {
+  showChat: boolean;
+  setShowChat: Dispatch<SetStateAction<boolean>>;
+}
+
+const Chatbot: React.FC<ChatbotProps> = ({ showChat, setShowChat }) => {
   const [messages, setMessages] = useState([
     { text: "Welcome to Gavsewa! How can I assist you?", sender: "bot" },
   ]);
   const [input, setInput] = useState("");
 
-  const predefinedResponses = {
+  const predefinedResponses: Record<string, string> = {
+    "who are you":"I am here to assist you regrading Gausewa Dal Foundation",
     "what is gavsewa": "Gavsewa is a platform dedicated to cow protection and welfare.",
     "how can i donate": "You can donate through our official donation page on the website.",
     "contact details": "You can reach us at support@gavsewa.org or call +91-1234567890.",
